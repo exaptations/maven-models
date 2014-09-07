@@ -7,6 +7,8 @@
   <properties>
     <mavenVersion>3.1.0</mavenVersion>
     <junitVersion>4.10</junitVersion>
+    <slf4jVersion>1.7.7</slf4jVersion>
+    <junitVersion>4.10</junitVersion>
   </properties>
   <build>
     <plugins>
@@ -28,14 +30,25 @@
       <version>${mavenVersion}</version>
     </dependency>
     <dependency>
+      <groupId>org.apache.maven</groupId>
+      <artifactId>maven-model-builder</artifactId>
+      <version>${mavenVersion}</version>
+    </dependency>
+    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
-      <version>${version.org.slf4j}</version>
+      <version>${slf4jVersion}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
-      <version>${version.org.slf4j}</version>
+      <version>${slf4jVersion}</version>
     </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junitVersion}</version>
+      <scope>test</scope>
+    </dependency>    
   </dependencies>
 </project>
